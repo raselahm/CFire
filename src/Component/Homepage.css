@@ -1,0 +1,35 @@
+.Homepage {
+    text-align: center;
+  }
+  
+  .Home-Header {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .settings{
+    width:100%;
+  }
+  
+  .link-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    outline:none;
+  }
+  
+  .link-button:hover,
+  .link-button:focus,
+  .link-button:active {
+    text-decoration: none;
+    outline:none;
+  }
