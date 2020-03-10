@@ -5,7 +5,9 @@ import FriendList from "./Component/FriendList.js";
 import LoginForm from "./Component/LoginForm.js";
 import Profile from "./Component/Profile.js";
 import FriendForm from "./Component/FriendForm.js";
+import ProfileHeader from "./Component/ProfileHeader.js";
 import Modal from "./Component/Modal.js";
+import ProfilePage from "./Component/ProfilePage";
 
 class MainContent extends React.Component {
   constructor(props) {
@@ -40,6 +42,13 @@ class MainContent extends React.Component {
           <Profile userid={sessionStorage.getItem("user")} />
         </div>
       );
+    }else if(this.state.section === "profilePage"){
+      return(
+        <div className="settings">
+        <ProfileHeader userid={sessionStorage.getItem("user")} />
+        <ProfilePage userid={sessionStorage.getItem("user")}></ProfilePage>
+        </div>
+      )
     } else {
       return <p>Unidentified Section!</p>;
     }
@@ -70,6 +79,7 @@ class App extends React.Component {
     let post = require("./post.svg");
     let friend = require("./friends.svg");
     let setting = require("./settings.svg");
+    let profile = require("./profile.svg");
     let help = require("./help.svg");
     let mainContent = React.createRef();
 
@@ -127,6 +137,19 @@ class App extends React.Component {
                     className="sidenav-icon"
                     alt="Settings"
                     title="Settings"
+                  />
+                </button>
+              </li>
+              <li className="pm admin">
+                <button
+                  className="link-button"
+                  onClick={e => setMenuOption("profilePage", mainContent, e)}
+                >
+                  <img
+                    src={profile}
+                    className="sidenav-icon"
+                    alt="ProfilePage"
+                    title="ProfilePage"
                   />
                 </button>
               </li>
