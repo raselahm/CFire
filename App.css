@@ -273,3 +273,72 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+
+
+form {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  padding: 3px 5px;
+  margin: 8px 5px;
+  left: 900px;
+  height: 25px;
+  top: 250px;
+  box-sizing: border-box;
+}
+
+input{
+  width: 27%;
+  height: 120%;
+  margin: 3px;
+}
+
+.divider {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background: black;
+  top: 5%;
+  left: 800px;
+   box-shadow: 0px 0px 40px 2px black; 
+}
+
+button {
+   padding: 3px 5px;
+   margin: 8px 5px;
+   height: 25px;
+   box-sizing: border-box;
+}
+
+headerBar {
+  background-color: #4b4f57;
+  min-height: 40px;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.greeting{
+  position: absolute;
+width: 642px;
+height: 88px;
+left: 108px;
+top: 126px;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+}
+
+.logo {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 108px;
+  top: 250px;
+}
+
