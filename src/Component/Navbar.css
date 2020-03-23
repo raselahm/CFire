@@ -2,30 +2,19 @@
     /* need to specify some position other than static, so height can apply.
        Fixed works since it will stay fixed to the side - 0 from both left and top. */
     position:fixed;
-    left:0px;
     top:0px;
-    height:100%;
-    width:100px;
+    left: 0px;
+    height:80px;
+    width:100%;
   
     /* internally to this container, we want to use flex positioning of the menu elements */
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-  
+    display:block;
     background-color: grey;
   }
   
-  .navbar ul{
+   .nav-element{
+      display: inline-block;
      list-style-type: none;
-     padding:10px;
-     margin:0px;
-     margin-top: 40px;
-  }
-  
-  .navbar-icon{
-    width:40px;
-    height:40px;
-  
-    margin-bottom:15px;
+     padding: 20px;
+     margin: auto;
   }

@@ -1,35 +1,94 @@
-.Homepage {
-    text-align: center;
+/* Responsive CSS stuff, directly from W3 */
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+  padding-right:40px;
+  justify-content: center;
+}
+
+/* For Desktop */
+@media only screen and (min-width: 768px) {
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}
+
+[class*="col-"] {
+  float: left;
+  padding-bottom: 15px;}
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
   }
-  
-  .Home-Header {
+
+  .projects{
+    display: block;
+    position: static;
+    height: 100%;
+    width: auto;
     background-color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    margin: auto;
+
   }
-  
-  .settings{
-    width:100%;
+
+  .create-post{
+    height: 100%;
+
   }
-  
-  .link-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+
+  .project-element{
     display: inline;
-    margin: 0;
-    padding: 0;
-    outline:none;
+    position: static;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    padding-left: 40px;
+
   }
-  
-  .link-button:hover,
-  .link-button:focus,
-  .link-button:active {
+
+  .project-headline{
+    display: block;
+    padding-top: 100px;
+    padding-left: 80px;
+    background-color: white;
+
+  }
+
+  .post-button{
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
     text-decoration: none;
-    outline:none;
+    display: inline-block;
+    margin-left: 80px;
+    margin-top: 100px;
+    font-size: 16px;
+  }
+
+  .group-headline{
+    display: block;
+    border-bottom: 1px solid black;
+    margin-left: 80px;
+  }
+
+  .group-element{
+    margin-left: 80px;
+    max-width: 100%;
+    margin-right: 80px;
+    height: auto;
+    margin-bottom: 20px;
   }

@@ -11,54 +11,19 @@ export default class Navbar extends React.Component {
         let help = require("./help.svg");
 
         return(
-        <div id="navbar" className="navbar">
+        <div id="row navbar" className="navbar">
             <ul id="side-menu-items">
-                <li className="pm admin student">
-                    <button
-                        className="link-button">
-                        <img
-                            src={post}
-                            className="navbar-icon"
-                            alt="Posts"
-                            title="Posts"
-                        />
-                    </button>
+                <li className="nav-element">
+                    Home
                 </li>
-                <li className="pm admin">
-                    <button
-                        className="link-button"
-                    >
-                        <img
-                            src={friend}
-                            className="navbar-icon"
-                            alt="Friends"
-                            title="Friends"
-                        />
-                    </button>
+                <li className="nav-element">
+                    Another one
                 </li>
-                <li className="pm admin">
-                    <button
-                        className="link-button"
-                    >
-                        <img
-                            src={setting}
-                            className="navbar-icon"
-                            alt="Settings"
-                            title="Settings"
-                        />
-                    </button>
+                <li className="nav-element">
+                Another one
                 </li>
-                <li className="pm admin">
-                    <button
-                        className="link-button"
-                    >
-                        <img
-                            src={help}
-                            className="navbar-icon"
-                            alt="Settings"
-                            title="Settings"
-                        />
-                    </button>
+                <li className="nav-element">
+                Another one
                 </li>
             </ul>
         </div>
