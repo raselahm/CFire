@@ -5,6 +5,7 @@
   width: 100%;
   padding-right:40px;
   justify-content: center;
+  background-color: #e4e4e4;
 }
 
 /* For Desktop */
@@ -29,9 +30,7 @@ html {
 
 [class*="col-"] {
   float: left;
-  padding-bottom: 15px;
   background-color: #e4e4e4;}
-
 
   .row::after {
     content: "";
@@ -45,6 +44,7 @@ html {
     position: static;
     height: 100%;
     width: auto;
+    background-color: #e4e4e4;
     margin: auto;
 
   }
@@ -101,4 +101,5 @@ html {
     margin-right: 80px;
     height: auto;
     margin-bottom: 20px;
+    background-color: #e4e4e4;
   }
