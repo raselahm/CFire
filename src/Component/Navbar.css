@@ -9,7 +9,7 @@
   
     /* internally to this container, we want to use flex positioning of the menu elements */
     display:block;
-    background-color: grey;
+    background-color: grey;;
   }
   
    .nav-element{

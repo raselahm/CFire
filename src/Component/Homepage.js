@@ -8,7 +8,8 @@ class Homepage extends React.Component {
   
   
       return (
-        <div className="row Homepage">
+        <html>
+        <div className="rr row Homepage">
           <header className="col-12 Home-Header">
             <Navbar/> 
           </header>
@@ -93,6 +94,7 @@ class Homepage extends React.Component {
 
 
         </div>
+        </html>
       );
     }
   }
