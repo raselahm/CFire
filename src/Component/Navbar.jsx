@@ -5,10 +5,6 @@ import "./Navbar.css"
 export default class Navbar extends React.Component {
 
     render(){
-        let post = require("./post.svg");
-        let friend = require("./friends.svg");
-        let setting = require("./settings.svg");
-        let help = require("./help.svg");
 
         return(
         <div id="row navbar" className="navbar">
