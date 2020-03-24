@@ -11,8 +11,9 @@ export default class Navbar extends React.Component {
         let help = require("./help.svg");
 
         return(
-        <div id="row navbar" className="navbar">
-            <ul id="side-menu-items">
+        
+                <div id="row navbar" className="navbar">
+                <ul id="side-menu-items">
                 <li className="nav-element">
                     Home
                 </li>
@@ -26,7 +27,8 @@ export default class Navbar extends React.Component {
                 Another one
                 </li>
             </ul>
-        </div>
+                </div>
+        
         );
             }
 

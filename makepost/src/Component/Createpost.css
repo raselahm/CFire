@@ -1,0 +1,87 @@
+[class*="col-"] {
+    width: 100%;
+    padding-right:40px;
+    justify-content: center;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    }
+
+    .btn1{
+        background-color: gray;
+        border: none;
+        color: whitesmoke;
+        padding: 15px 20px;
+        text-align: center;
+        text-decoration: none;
+        margin-left: 0px;
+        margin-top: 100px;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-flex;
+        border: solid;
+        border-width: 3px;
+        border-color: black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .btn2{
+        background-color: gray;
+        border: none;
+        color: whitesmoke;
+        padding: 15px 20px;
+        text-align: center;
+        text-decoration: none;
+        margin-left: 436px;
+        margin-top: 100px;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-flex;
+        border: solid;
+        border-width: 3px;
+        border-color: black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+    
+    
+        
+    .text1{
+        margin-top: 10px;
+        margin-bottom: 5px;
+        width: 600px;    
+        display: flex;    
+        border: solid;
+        border-width: 3px;
+        border-color: black;
+    }
+
+    .text2{
+        display: flex;
+        height: 300px;
+        width: 600px;
+        border: solid;
+        border-width: 3px;
+        border-color: black;
+    
+        
+    }
+
+    .wholeform{    
+        margin-top: 100px;
+        
+    }
+    .wholepage{
+        display: flex;
+        background-color: lightblue;
+    }
