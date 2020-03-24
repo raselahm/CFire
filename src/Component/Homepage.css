@@ -24,19 +24,13 @@
 .col-12 {width: 100%;}
 }
 
-.Homepage{
-  background-color: #e4e4e4;
-}
-
-.row{
+html {
   background-color: #e4e4e4;
 }
 
 [class*="col-"] {
   float: left;
-  padding-bottom: 15px;
-  background-color: #e4e4e4;
-}
+  background-color: #e4e4e4;}
 
   .row::after {
     content: "";
@@ -45,6 +39,7 @@
   }
 
   .projects{
+    background-color: #e4e4e4;
     display: block;
     position: static;
     height: 100%;
@@ -55,11 +50,13 @@
   }
 
   .create-post{
+    background-color: #e4e4e4;
     height: 100%;
 
   }
 
   .project-element{
+    background-color: #e4e4e4;
     display: inline;
     position: static;
     margin: auto;
@@ -94,9 +91,11 @@
     display: block;
     border-bottom: 1px solid black;
     margin-left: 80px;
+    background-color: #e4e4e4;
   }
 
   .group-element{
+    background-color: #e4e4e4;
     margin-left: 80px;
     max-width: 100%;
     margin-right: 80px;
