@@ -6,10 +6,13 @@
     left: 0px;
     height:80px;
     width:100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: grey;
   
     /* internally to this container, we want to use flex positioning of the menu elements */
-    display:block;
-    background-color: grey;
   }
   
    .nav-element{
