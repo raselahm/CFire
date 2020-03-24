@@ -1,0 +1,21 @@
+.navbar{
+    /* need to specify some position other than static, so height can apply.
+       Fixed works since it will stay fixed to the side - 0 from both left and top. */
+    position: fixed;
+    top:0px;
+    left: 0px;
+    height:80px;
+    width:100%;
+    /* internally to this container, we want to use flex positioning of the menu elements */
+    display:flex;
+    background-color: #e4e4e4;
+  }
+  
+   .nav-element{
+      display: inline-block;
+     list-style-type: none;
+     padding: 20px;
+     margin: auto;
+  }
+
+  
