@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/cse410/blackhole/deploy/static/css/main.81196e85.chunk.css",
-    "main.js": "/cse410/blackhole/deploy/static/js/main.68618e7e.chunk.js",
-    "main.js.map": "/cse410/blackhole/deploy/static/js/main.68618e7e.chunk.js.map",
+    "main.css": "/cse410/blackhole/deploy/static/css/main.80119e65.chunk.css",
+    "main.js": "/cse410/blackhole/deploy/static/js/main.ce84b7bd.chunk.js",
+    "main.js.map": "/cse410/blackhole/deploy/static/js/main.ce84b7bd.chunk.js.map",
     "runtime-main.js": "/cse410/blackhole/deploy/static/js/runtime-main.9b133987.js",
     "runtime-main.js.map": "/cse410/blackhole/deploy/static/js/runtime-main.9b133987.js.map",
-    "static/js/2.d196fa71.chunk.js": "/cse410/blackhole/deploy/static/js/2.d196fa71.chunk.js",
-    "static/js/2.d196fa71.chunk.js.map": "/cse410/blackhole/deploy/static/js/2.d196fa71.chunk.js.map",
+    "static/js/2.500a41e4.chunk.js": "/cse410/blackhole/deploy/static/js/2.500a41e4.chunk.js",
+    "static/js/2.500a41e4.chunk.js.map": "/cse410/blackhole/deploy/static/js/2.500a41e4.chunk.js.map",
     "index.html": "/cse410/blackhole/deploy/index.html",
-    "precache-manifest.91d324bcd911e329a56828b183bc0487.js": "/cse410/blackhole/deploy/precache-manifest.91d324bcd911e329a56828b183bc0487.js",
+    "precache-manifest.51c1fe3206c29e82bc9381091ddaf00c.js": "/cse410/blackhole/deploy/precache-manifest.51c1fe3206c29e82bc9381091ddaf00c.js",
     "service-worker.js": "/cse410/blackhole/deploy/service-worker.js",
-    "static/css/main.81196e85.chunk.css.map": "/cse410/blackhole/deploy/static/css/main.81196e85.chunk.css.map",
-    "static/js/2.d196fa71.chunk.js.LICENSE.txt": "/cse410/blackhole/deploy/static/js/2.d196fa71.chunk.js.LICENSE.txt",
+    "static/css/main.80119e65.chunk.css.map": "/cse410/blackhole/deploy/static/css/main.80119e65.chunk.css.map",
+    "static/js/2.500a41e4.chunk.js.LICENSE.txt": "/cse410/blackhole/deploy/static/js/2.500a41e4.chunk.js.LICENSE.txt",
     "static/media/CFire.jpg": "/cse410/blackhole/deploy/static/media/CFire.6c02a2f3.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.9b133987.js",
-    "static/js/2.d196fa71.chunk.js",
-    "static/css/main.81196e85.chunk.css",
-    "static/js/main.68618e7e.chunk.js"
+    "static/js/2.500a41e4.chunk.js",
+    "static/css/main.80119e65.chunk.css",
+    "static/js/main.ce84b7bd.chunk.js"
   ]
 }

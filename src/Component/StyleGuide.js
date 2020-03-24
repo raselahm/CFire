@@ -1,8 +1,7 @@
 import React from "react";
-import "../StyleGuide.css";
-import MessagePageFriend from "./MessagePageFriend";
-import MessagePageMessages from "./MessagePageMessages";
+import "./StyleGuide.css";
 import logo from '../CFire.jpg'
+import Navbar from '../Navbar'
 export default class StyleGuide extends React.Component {
     constructor(props) {
         super(props);
@@ -20,9 +19,10 @@ export default class StyleGuide extends React.Component {
     render() {
 
         return (
-
+            <html>
             <div className="styleguide-container">
-                StyleGuide
+                <Navbar/>
+                <h1>StyleGuide</h1>
                 <div className="styleguide-divider-group">
                     <p className="label">Colors</p>
                     <span className="styleguide-divider"></span>
@@ -93,6 +93,7 @@ export default class StyleGuide extends React.Component {
 
                 </div>
             </div>
+            </html>
         );
 
 

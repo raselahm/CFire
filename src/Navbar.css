@@ -14,6 +14,14 @@
   
     /* internally to this container, we want to use flex positioning of the menu elements */
   }
+
+  li {
+     color: white;
+     padding: 15px 32px;
+  }
+  li:hover{
+     color: black;
+  }
   
    .nav-element{
       display: inline-block;

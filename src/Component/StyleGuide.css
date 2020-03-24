@@ -1,3 +1,6 @@
+html{
+    background-color: #e4e4e4;
+}
 .styleguide-container{
     margin-top: 150px;
     width: 50%;
@@ -8,7 +11,7 @@
     flex-direction: column;
     align-self: center;
     
-    background-color: #add8e6;
+    background-color: #e4e4e4;
 }
 
 .styleguide-colors{
@@ -74,7 +77,8 @@
 }
 
 .label{
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .styleguide-description-group{
