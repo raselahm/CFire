@@ -5,7 +5,7 @@ import loginPage from './loginPage';
 import registrationPage from './registrationPage';
 import onboardingPage from './onboarding';
 import {
-  BrowserRouter as Router, 
+  HashRouter as Router, 
   Route,
   Link
 } from 'react-router-dom';
