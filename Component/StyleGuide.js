@@ -2,7 +2,7 @@ import React from "react";
 import "../StyleGuide.css";
 import MessagePageFriend from "./MessagePageFriend";
 import MessagePageMessages from "./MessagePageMessages";
-
+import logo from '../CFire.jpg'
 export default class StyleGuide extends React.Component {
     constructor(props) {
         super(props);
@@ -23,7 +23,6 @@ export default class StyleGuide extends React.Component {
 
             <div className="styleguide-container">
                 StyleGuide
-
                 <div className="styleguide-divider-group">
                     <p className="label">Colors</p>
                     <span className="styleguide-divider"></span>
@@ -42,6 +41,7 @@ export default class StyleGuide extends React.Component {
                     <div className="styleguide-description">
                         <p>Light Blue</p>
                         <p>Hex#: add8e6</p>
+                        
 
                     </div>
                     <div className="styleguide-description">
@@ -72,7 +72,7 @@ export default class StyleGuide extends React.Component {
                     <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
                     </div>
                     <div className="styleguide-font2"> Calibri
-                    <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                    <p>abcdefghijklmnopqrstuvwxyz</p>
                     </div>
 
 
@@ -86,8 +86,10 @@ export default class StyleGuide extends React.Component {
                 </div>
 
                 <div className="styleguide-logo">
+                    <div className="styleguide-logo-wrap">
+                    <img className="stylegide-logo-img" src={logo}></img>
 
-
+                    </div>
 
                 </div>
             </div>
