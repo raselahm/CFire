@@ -7,11 +7,12 @@
     justify-content: center;
     flex-direction: column;
     align-self: center;
+    
     background-color: #add8e6;
 }
 
 .styleguide-colors{
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     width: 75%;
@@ -123,4 +124,9 @@
     padding: 10px;
     padding-right: 10px;
     margin-right: 10px;
+}
+
+.stylegide-logo-img{
+    width: 250px;
+    height: 250px;
 }
