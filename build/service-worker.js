@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/cse410/blackhole/deploy/precache-manifest.91d324bcd911e329a56828b183bc0487.js"
+  "/cse410/blackhole/deploy/precache-manifest.51c1fe3206c29e82bc9381091ddaf00c.js"
 );
 
 self.addEventListener('message', (event) => {

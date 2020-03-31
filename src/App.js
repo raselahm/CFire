@@ -13,6 +13,7 @@ import Homepage from './Homepage';
 import Createpost from './Createpost'
 import MessagePage from './MessagePage'
 import ProfilePage from './ProfilePage';
+import Styleguide from './Component/StyleGuide'
 
 class App extends Component {
   render(){
@@ -28,6 +29,7 @@ class App extends Component {
                 <Route  path="/Createpost" component={Createpost} />
                 <Route  path="/MessagePage" component={MessagePage} />
                 <Route  path="/ProfilePage" component={ProfilePage} />
+                <Route  path="/Styleguide" component={Styleguide} />
                 <Route exact path="/loginPage" component={loginPage} />
               </div>
             </Router>               

@@ -86,6 +86,9 @@ html {
     margin-top: 100px;
     font-size: 16px;
   }
+  .post-button:hover{
+    color:black;
+  }
 
   .group-headline{
     display: block;

@@ -22,6 +22,9 @@ export default class Navbar extends React.Component {
                 <Link to = '/loginPage'><li className="nav-element">
                 Log Out
                 </li></Link>
+                <Link to = '/Styleguide'><li className="nav-element">
+                Style Guide
+                </li></Link>
             </ul>
         </div>
         );
