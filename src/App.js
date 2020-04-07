@@ -14,6 +14,7 @@ import Createpost from './Createpost'
 import MessagePage from './MessagePage'
 import ProfilePage from './ProfilePage';
 import Styleguide from './Component/StyleGuide'
+import postPage from './Postdetails'
 
 class App extends Component {
   render(){
@@ -31,6 +32,7 @@ class App extends Component {
                 <Route  path="/ProfilePage" component={ProfilePage} />
                 <Route  path="/Styleguide" component={Styleguide} />
                 <Route exact path="/loginPage" component={loginPage} />
+                <Route exact path="/postPage" component={postPage} />
               </div>
             </Router>               
         

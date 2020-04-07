@@ -48,7 +48,7 @@ export default class LoginForm extends React.Component{ //Create Component that 
             <br/>
             <Link to = "/Homepage"><button className = "loginButton" onClick = {
                 e => this.onSubmit(e)
-                }> login </button></Link>
+                }> Login </button></Link>
             <Link to = "/registrationPage"><button className = "registerButton">Register</button></Link>
         </form>
        );

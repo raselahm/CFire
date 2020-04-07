@@ -18,13 +18,13 @@ class Createpost extends React.Component {
             <div id="row wholeform" className="wholeform">    
             <p><strong><center>MAKE A POST</center></strong></p>            
                 <form>
-                        <textarea type="text" placeholder= "Title..." id="row text1" className="text1"/>
+                        <textarea type="text" placeholder= "Title" id="row text1" className="text1"/>
                 </form>               
                 
                 <form>
-                        <textarea type="text" placeholder = "Post Description..." id="row text2" className="text2"/>
+                        <textarea type="text" placeholder = "Post Description" id="row text2" className="text2"/>
                         <Link to = '/Homepage'><button type="button" onClick={this.onSubmit} className="btn1">Cancel</button></Link>
-                        <Link to = '/Homepage'><button type="button" onClick={this.onSubmit} className="btn2">Post!</button></Link>
+                        <Link to = '/Homepage'><button type="button" onClick={this.onSubmit} className="btn2">Post</button></Link>
                 </form>               
             </div>   
         </div>

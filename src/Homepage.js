@@ -27,16 +27,16 @@ class Homepage extends React.Component {
           <div className="col-1"></div>
 
             <div className="col-2 project-element">
-              <img className="project-element" src = "https://via.placeholder.com/200"/>
+            <Link to = '/postPage'><img className="project-element" src = "https://via.placeholder.com/200"/></Link>
               </div>
               <div className="col-2 project-element">
-              <img className="project-element" src = "https://via.placeholder.com/200"/>
+              <Link to = '/postPage'><img className="project-element" src = "https://via.placeholder.com/200"/></Link>
               </div>
               <div className="col-2 project-element">
-              <img className="project-element" src = "https://via.placeholder.com/200"/>
+              <Link to = '/postPage'><img className="project-element" src = "https://via.placeholder.com/200"/></Link>
               </div>
               <div className="col-2 project-element">
-              <img className="project-element" src = "https://via.placeholder.com/200"/>
+              <Link to = '/postPage'><img className="project-element" src = "https://via.placeholder.com/200"/></Link>
               </div>
           </div>
 
@@ -60,7 +60,7 @@ class Homepage extends React.Component {
           <div className="row">
             <div className="col-1"></div>
             <div className="col-10">
-            <img className="group-element" src = "https://via.placeholder.com/800x200?text=Project+Name+and+Description"/>
+            <Link to = '/postPage'><img className="group-element" src = "https://via.placeholder.com/800x200?text=Project+Name+and+Description"/></Link>
             </div>
             <div className="col-1"></div>
           </div>
@@ -68,16 +68,7 @@ class Homepage extends React.Component {
           <div className="row">
             <div className="col-1"></div>
             <div className="col-10">
-            <img className="group-element" src = "https://via.placeholder.com/800x200?text=Project+Name+and+Description"/>
-            </div>
-            <div className="col-1"></div>
-          </div>
-
-
-          <div className="row">
-            <div className="col-1"></div>
-            <div className="col-10">
-            <img className="group-element" src = "https://via.placeholder.com/800x200?text=Project+Name+and+Description"/>
+            <Link to = '/postPage'><img className="group-element" src = "https://via.placeholder.com/800x200?text=Project+Name+and+Description"/></Link>
             </div>
             <div className="col-1"></div>
           </div>
@@ -86,7 +77,16 @@ class Homepage extends React.Component {
           <div className="row">
             <div className="col-1"></div>
             <div className="col-10">
-            <img className="group-element" src = "https://via.placeholder.com/800x200?text=Project+Name+and+Description"/>
+            <Link to = '/postPage'><img className="group-element" src = "https://via.placeholder.com/800x200?text=Project+Name+and+Description"/></Link>
+            </div>
+            <div className="col-1"></div>
+          </div>
+
+
+          <div className="row">
+            <div className="col-1"></div>
+            <div className="col-10">
+            <Link to = '/postPage'><img className="group-element" src = "https://via.placeholder.com/800x200?text=Project+Name+and+Description"/></Link>
             </div>
             <div className="col-1"></div>
           </div>
