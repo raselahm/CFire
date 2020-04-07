@@ -91,7 +91,7 @@ export default class RegisterForm extends React.Component{ //Create Component th
             onChange  = {e => this.change(e)}
             />
             <br/>
-            <Link to = '/onboarding'><button >Register</button></Link>
+            <Link to = '/onboarding'><button className="registerButton">Register</button></Link>
         </form>
        );
     }
