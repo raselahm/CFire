@@ -122,5 +122,22 @@
 
 }
 
+.messagePageInput-send{
+  border: solid;
+  border-width: 3px;
+  border-color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+.messagePage-settings {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-self: center;
+}
+
 
 

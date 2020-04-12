@@ -1,5 +1,5 @@
 import React from "react";
-import "./MessagePage.css";
+import "../MessagePage.css";
 import MessagePageFriend from "./MessagePageFriend";
 import MessagePageMessages from "./MessagePageMessages";
 
@@ -17,17 +17,28 @@ export default class MessagePageInput extends React.Component {
     }
 
 
+    myChangeHandler = event => {
+        this.setState({
+            username: event.target.value
+        });
+    };
+
+    onSubmitMessage(text){
+
+    }
+
+
     render() {
 
         return (
 
             <div className="messagePageInput-container">
-                <textarea className="messagePageInput-textArea" rows="4" cols="150">
-                    Input your stuff here...........
-                </textarea>
-                <button className="messagePageInput-send">Send</button>
+            <textarea className="messagePageInput-textArea" rows="4" cols="150">
+            Input your stuff here...........
+    </textarea>
+    <button className="messagePageInput-send">Send</button>
 
-            </div>
+    </div>
         );
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./MessagePage.css";
+import "../MessagePage.css";
 import MessagePageFriend from "./MessagePageFriend";
 import Message from "./Message";
 import MessagePageInput from "./MessagePageInput"
@@ -20,7 +20,7 @@ export default class MessagePageMessages extends React.Component {
     render() {
 
         return(
-            
+
          <div className="messagePagemessages-container">
              <div className ="messagePagemessages-messages">
                  <Message></Message>

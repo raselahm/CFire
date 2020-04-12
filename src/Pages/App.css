@@ -2,20 +2,26 @@
   text-align: center;
 }
 
+.App-logo {
+  height: 40vmin;
+}
 
-/* .App-header {
-  background-color: #282c34;
+.App-header {
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: row;
-  align-items: flex-center;
+  align-items: flex-start;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-} */
+  color:  rgb(0, 0, 0);
+}
 
 .settings{
+  display: flex;
+  flex-direction: column;
   width:100%;
+  align-self: center;
 }
 
 .link-button {
@@ -100,6 +106,8 @@
   display: inline-flex;
 }
 
+
+
 .userlist {
   text-align: left;
   background: blue;
@@ -140,8 +148,7 @@
 .maincontent{
   display: flex;
   flex-direction: column;
-  align-content: center;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-grow: 1;
 }
@@ -153,6 +160,7 @@
     justify-content: flex-start;
 }
 
+
 .postbody{
   width:60%;
   display:flex;
@@ -160,6 +168,8 @@
   align-items: flex-start;
   justify-content: center;
 }
+
+
 
 .comment-block{
   width:100%;
@@ -175,8 +185,8 @@
   position:fixed;
   left:0px;
   top:0px;
-  height:100%;
-  width:100px;
+  height:6%;
+  width:100%;
 
   /* internally to this container, we want to use flex positioning of the menu elements */
   display:flex;
@@ -184,7 +194,7 @@
   align-items: center;
   justify-content: flex-start;
 
-  background-color: gray;
+  background-color: blue;
 }
 
 .sidenav ul{
@@ -247,14 +257,14 @@
 }
 
 /* Modal Content/Box */
-/* .modal-content {
+.modal-content {
   background-color: #fefefe;
-  margin: 15% auto; 
+  margin: 15% auto; /* 15% from the top and centered */
   padding: 1px 10px 20px 20px;
   border: 1px solid #888;
-  width: 50%; 
+  width: 50%; /* Could be more or less, depending on screen size */
   height: 200px;
-} */
+}
 
 /* The Close Button */
 .close {
@@ -272,10 +282,146 @@
   cursor: pointer;
 }
 
-.messagePage-settings {
+
+
+
+.profile-header{
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  width: 75%;
+  margin-left: 200px;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+.profile-pic{
+  height: 160px;
+  width: 160px;
+  display: flex;
+  border-radius: 50%;
+  background-color: rgba(61, 61, 68, 0.849);
+  border-radius: 50%; 
+}
+
+.profile-name{
   display: flex;
   flex-direction: column;
+}
+
+.profile-divider{
+  display: flex;
+  margin-top: -20px;
+  height: 2px;
+  width: 90%;
+  background-color: black;
+}
+
+.profile-button{
+  display: flex;
+  border-radius: 40%;
+  height: 30px;
+  width: 100px;
+}
+
+.profile-buttons{
+  display: flex;
+  flex-direction: row;
+} 
+
+ .profile-container{
+   width: 75%;
+   flex-direction: column;
+   align-content: center;
+   align-self: center;
+ }
+
+.profile-labels{
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  font-size: 18px;
+  justify-content: flex-start;
+  word-spacing: 15px;
+}
+
+.profile-tabs{
+  margin-left: 30px;
+}
+
+.profile-nav{
+  display: flex;
   width: 100%;
+}
+
+.profile-page-container{
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-self: center;
+}
+
+.profile-page-skills{
+  margin-top: 55px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 33%;
+
+}
+
+
+
+.profile-page-skill-icon{
+  display: flex;
+  height: 75px;
+  width: 75px;
+
+  border-radius: 100%;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: rgba(61, 61, 68, 0.849);
+}
+
+.profile-page-uploads{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  width: 50%;
+  margin-top: 15px;
+  margin-left: 110px;
+}
+
+.profile-page-upload-button{
+  display: flex;
+  border-radius: 40%;
+  margin-top: 15px;
+  height: 30px;
+  width: 100px;
+}
+
+.profile-page-button-list{
+  align-self: flex-end;
+  list-style: none;
+}
+
+.profile-page-skill-label{
+  font-size: 13px;
+  margin-left: 110px;
+  align-self: flex-end;
+}
+
+.messagePage-settings{
+  display: flex;
+  flex-direction: column;
+  width:100%;
   height: 100vh;
   align-self: center;
 }
+

@@ -1,18 +1,12 @@
 import React from "react";
-import "./MessagePage.css";
+import "../MessagePage.css";
 
 
 export default class Message extends React.Component {
     constructor(props) {
-        super(props);
-        this.state = {
-            isLoaded: false,
-            error: null,
-            userid: "UserName",
-            picture: [],
-            followerCount: ""
 
-        };
+        super(props);
+        console.log(props);
     }
 
 
@@ -26,12 +20,13 @@ export default class Message extends React.Component {
                         Username:
                     </div>
                     <div className="message-text-content">
-                        Content asdfasdflkja df asd flakjsdflkaj
+    
+                        {this.props.text.message}
                     </div>
                 </div>
-                <span className="message-footer">
-                   .
-                </span>
+                <div className="message-footer">
+                   
+                </div>
             </div>
         );
 
