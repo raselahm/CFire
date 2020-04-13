@@ -40,7 +40,7 @@ class App extends React.Component {
               <Route path="/Registration" component={Registration} />
               <Route path="/Homepage" component={Homepage} />
               <Route path="/MessagePage" component={MessagePage} />
-
+              <Route path="/ProfilePage" component={Profile} />
               <Route path="/CreatePost" component={CreatePost}></Route>
             </div>
           </Router>

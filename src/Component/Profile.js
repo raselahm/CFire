@@ -1,5 +1,7 @@
 import React from "react";
-import "../App.css";
+import "./Profile.css";
+import Navbar from "./Navbar";
+import ProfileHeader from "./ProfileHeader";
 
 export default class Profile extends React.Component {
   constructor(props) {
@@ -11,7 +13,6 @@ export default class Profile extends React.Component {
       favoritecolor: "",
       responseMessage: ""
     };
-    this.fieldChangeHandler.bind(this);
   }
 
   fieldChangeHandler(field, e) {
@@ -36,7 +37,7 @@ export default class Profile extends React.Component {
 
   componentDidMount() {
     //make the api call to the user API to get the user with all of their attached preferences
-    fetch("http://stark.cse.buffalo.edu/hci/usercontroller.php", {
+    fetch("http://stark.cse.buffalo.edu/cse410/blackhole/api/usercontroller.php", {
       method: "post",
       body: JSON.stringify({
         action: "getCompleteUsers",
@@ -81,7 +82,7 @@ export default class Profile extends React.Component {
     event.preventDefault();
 
     //make the api call to the user controller
-    fetch("http://stark.cse.buffalo.edu/hci/usercontroller.php", {
+    fetch("http://stark.cse.buffalo.edu/cse410/blackhole/api/usercontroller.php", {
       method: "post",
       body: JSON.stringify({
         action: "addOrEditUsers",
@@ -106,7 +107,7 @@ export default class Profile extends React.Component {
       );
 
     //make the api call to the user prefs controller
-    fetch("http://stark.cse.buffalo.edu/hci/upcontroller.php", {
+    fetch("http://stark.cse.buffalo.edu/cse410/blackhole/api/upcontroller.php", {
       method: "post",
       body: JSON.stringify({
         action: "addOrEditUserPrefs",
@@ -132,48 +133,26 @@ export default class Profile extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.submitHandler} className="profileform">
-        <label>
-          Username
-          <input
-            type="text"
-            onChange={e => this.fieldChangeHandler("username", e)}
-            value={this.state.username}
-          />
-        </label>
-        <label>
-          First Name
-          <input
-            type="text"
-            onChange={e => this.fieldChangeHandler("firstname", e)}
-            value={this.state.firstname}
-          />
-        </label>
-        <label>
-          Last Name
-          <input
-            type="text"
-            onChange={e => this.fieldChangeHandler("lastname", e)}
-            value={this.state.lastname}
-          />
-        </label>
-        <label>
-          Favorite Color
-          <input
-            type="text"
-            onChange={e => this.prefChangeHandler("favoritecolor", e)}
-            value={
-              this.state.favoritecolor
-                ? this.state.favoritecolor.pref_value
-                : ""
-            }
-          />
-        </label>
-        <input type="submit" value="submit" />
-        <p>Username is : {this.state.username}</p>
-        <p>Firstname is : {this.state.firstname}</p>
-        {this.state.responseMessage}
-      </form>
+      <div className="profile-page-container">
+      <Navbar/>
+      <ProfileHeader/>
+        <div className="profile-page-skills">
+          <span className="profile-page-skill-icon"></span>
+          <span className="profile-page-skill-icon"></span>
+          <span className="profile-page-skill-icon"></span>
+          <span className="profile-page-skill-icon"></span>
+          <span className="profile-page-skill-icon"></span>
+          <span className="profile-page-skill-icon"></span>
+        </div>
+        <div className="profile-page-uploads">
+          <ul className="profile-page-button-list'=">
+            <button className="profile-button">Website</button>
+            <button className="profile-button">Resume</button>
+            <button className="profile-button">LinkedIn</button>
+          </ul>
+        </div>
+        <h1 className="profile-page-skill-label">Programing Languages</h1>
+      </div>
     );
   }
 }
