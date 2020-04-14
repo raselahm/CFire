@@ -7,6 +7,50 @@ import './onboarding.css'
 
 
 export default class OnBoardingPage extends Component {
+
+    state = {
+        firstName: "",
+        lastName: "",
+        username: ""
+    }
+
+
+    addSpec = e => {
+
+        fetch("http://stark.cse.buffalo.edu/cse410/blackhole/api/uacontroller.php",{
+            method: "post",
+            body: JSON.stringify({
+                action: "addOrEditUserArtifacts",
+                user_id: sessionStorage.getItem("user"),
+                userid: sessionStorage.getItem("user"),
+                artifact_category: "Specialty",
+                session_token: sessionStorage.getItem("token")
+            })
+        });
+
+
+    }
+
+    addAboutMe = e => {
+
+        
+
+
+    }
+
+    addUser = e =>{
+
+
+
+
+    }
+
+
+    onsubmit = e => {
+
+    }
+
+
     render(){
         return (
           <div className = "App">        
@@ -27,51 +71,50 @@ export default class OnBoardingPage extends Component {
                 
                 <div class="col-m-9 col-5 main">
                 <h3><p id="Greet"> Welcome! <br/>What kind of development do you do? </p>
-                <SearchBar className = "searchSpec"/>
                 <br/>
                 
                 <span >
                     
                         <div className = "col-2 row1">
                         <div className="col-2 spec-element">
-                        <img className="spec-element" src = "https://via.placeholder.com/200"/>
+                        <img className="spec-element" src = "https://via.placeholder.com/200"  alt = ""/>
                         </div>
                         <div className="col-2 spec-element">
-                        <img className="spec-element" src = "https://via.placeholder.com/200"/>
+                        <img className="spec-element" src = "https://via.placeholder.com/200" alt = ""/>
                         </div>
                         <div className="col-2 spec-element">
-                        <img className="spec-element" src = "https://via.placeholder.com/200"/>
+                        <img className="spec-element" src = "https://via.placeholder.com/200" alt = ""/>
                         </div>
                         <div className="col-2 spec-elementt">
-                        <img className="spec-element" src = "https://via.placeholder.com/200"/>
+                        <img className="spec-element" src = "https://via.placeholder.com/200" alt = ""/>
                         </div>
                     </div>
                     <div className = "col-2 row2">
                     <div className="col-2 spec-element">
-                        <img className="spec-element" src = "https://via.placeholder.com/200"/>
+                        <img className="spec-element" src = "https://via.placeholder.com/200" alt = ""/>
                         </div>
                         <div className="col-2 spec-element">
-                        <img className="spec-element" src = "https://via.placeholder.com/200"/>
+                        <img className="spec-element" src = "https://via.placeholder.com/200" alt = ""/>
                         </div>
                         <div className="col-2 spec-element">
-                        <img className="spec-element" src = "https://via.placeholder.com/200"/>
+                        <img className="spec-element" src = "https://via.placeholder.com/200" alt = ""/>
                         </div>
                         <div className="col-2 spec-elementt">
-                        <img className="spec-element" src = "https://via.placeholder.com/200"/>
+                        <img className="spec-element" src = "https://via.placeholder.com/200" alt = ""/>
                         </div>
                     </div>
                     <div className = "col-2 row2">
                     <div className="col-2 spec-element">
-                        <img className="spec-element" src = "https://via.placeholder.com/200"/>
+                        <img className="spec-element" src = "https://via.placeholder.com/200" alt = ""/>
                         </div>
                         <div className="col-2 spec-element">
-                        <img className="spec-element" src = "https://via.placeholder.com/200"/>
+                        <img className="spec-element" src = "https://via.placeholder.com/200" alt = ""/>
                         </div>
                         <div className="col-2 spec-element">
-                        <img className="spec-element" src = "https://via.placeholder.com/200"/>
+                        <img className="spec-element" src = "https://via.placeholder.com/200" alt = ""/>
                         </div>
                         <div className="col-2 spec-elementt">
-                        <img className="spec-element" src = "https://via.placeholder.com/200"/>
+                        <img className="spec-element" src = "https://via.placeholder.com/200" alt = ""/>
                         </div>
                     </div>
                     <div className = "col-2 row3">
@@ -134,7 +177,44 @@ export default class OnBoardingPage extends Component {
                 </div>
                     <Link to = '/Homepage'> <button class = "nextButton">Submit</button></Link>
             </div>
-            
+            <form onSubmit = {this.onSubmit}>
+            <input 
+          className = "loginInput"
+          name = "firstName"
+          placeholder = "First Name" 
+          value = {this.state.firstName}
+          // onChange function allows you to change the state of the component
+          // Similar to lambda function in java for syntax
+          onChange = {e => this.change(e)}
+          required
+          /> 
+          <br/>
+          <input 
+          className = "loginInput"
+          name = "lastName"
+          placeholder = "Last Name" 
+          value = {this.state.lastName}
+          // onChange function allows you to change the state of the component
+          // Similar to lambda function in java for syntax
+          onChange = {e => this.change(e)}
+          required
+          /> 
+          <br/>
+          <input type = "text"
+          className = "loginInput"
+          name = "username"
+          placeholder = "Username" 
+          value = {this.state.username}
+          // onChange function allows you to change the state of the component
+          // Similar to lambda function in java for syntax
+          onChange = {e => this.change(e)}
+          required
+          /> 
+          <br/>
+          <div style = {{fontSize:8, color: "red"}}>
+             {this.state.usernameError}
+          </div>
+            </form>
           </div>
         );
         
