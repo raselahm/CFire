@@ -63,26 +63,20 @@ if (isValidJSON($json_params)) {
     if (array_key_exists('userrole', $decoded_params)) {
         $userRole =  $decoded_params['userrole'];
     }
-    $userId = "";
+    $authUserId = "";
     if (array_key_exists('user_id', $decoded_params)) {
-        $userId =  $decoded_params['user_id'];
+        $authUserId =  $decoded_params['user_id'];
     }
     $sessionToken = "";
     if (array_key_exists('session_token', $decoded_params)) {
         $sessionToken =  $decoded_params['session_token'];
     }
-
-    $mode = "blanknull";
-    if (array_key_exists('mode', $decoded_params)) {
-        $mode =  $decoded_params['mode'];
-    }
-
     if ($action == "addOrEditUsers") {
-        if (validateAPIKey($userId, $sessionToken)) {
+        if (validateAPIKey($authUserId, $sessionToken)) {
             $args = array();
             if (IsNullOrEmpty($userId)) {
-                $sql = "INSERT INTO users (user_id,username,email_addr,password,session_token,otp,status,name,first_name,last_name,user_role) VALUES ( ?,?,?,?,?,?,?,?,?,?,?);";
-                array_push($args, $userId);
+                $sql = "INSERT INTO users (username,email_addr,password,session_token,otp,status,name,first_name,last_name,user_role) VALUES ( ?,?,?,?,?,?,?,?,?,?,?);";
+
                 array_push($args, $username);
                 array_push($args, $emailAddr);
                 array_push($args, $password);
@@ -104,103 +98,17 @@ if (isValidJSON($json_params)) {
                 }
             } else {
                 $sql = "UPDATE users SET username = ?,email_addr = ?,password = ?,session_token = ?,otp = ?,status = ?,name = ?,first_name = ?,last_name = ?,user_role = ? WHERE user_id = ?; ";
-                $args = array();
-                $sql = "UPDATE users SET ";
-                $first = true;
-
-                if (!IsNullOrEmpty($username)) {
-                    if ($first) {
-                        $sql .= " username = ? ";
-                        $first = false;
-                    } else {
-                        $sql .= " , username = ? ";
-                    }
-                    array_push($args, $username);
-                }
-                if (!IsNullOrEmpty($emailAddr)) {
-                    if ($first) {
-                        $sql .= " email_addr = ? ";
-                        $first = false;
-                    } else {
-                        $sql .= " ,email_addr = ? ";
-                    }
-                    array_push($args, $emailAddr);
-                }
-                if (!IsNullOrEmpty($password)) {
-                    if ($first) {
-                        $sql .= " password = ? ";
-                        $first = false;
-                    } else {
-                        $sql .= " ,password = ? ";
-                    }
-                    array_push($args, $password);
-                }
-                if (!IsNullOrEmpty($sessionToken)) {
-                    if ($first) {
-                        $sql .= " session_token = ? ";
-                        $first = false;
-                    } else {
-                        $sql .= " ,session_token = ? ";
-                    }
-                    array_push($args, $sessionToken);
-                }
-                if (!IsNullOrEmpty($otp)) {
-                    if ($first) {
-                        $sql .= " otp = ? ";
-                        $first = false;
-                    } else {
-                        $sql .= " , otp = ? ";
-                    }
-                    array_push($args, $otp);
-                }
-                if (!IsNullOrEmpty($status)) {
-                    if ($first) {
-                        $sql .= " status = ? ";
-                        $first = false;
-                    } else {
-                        $sql .= " ,status = ? ";
-                    }
-                    array_push($args, $status);
-                }
-                if (!IsNullOrEmpty($name)) {
-                    if ($first) {
-                        $sql .= " name = ? ";
-                        $first = false;
-                    } else {
-                        $sql .= " ,name = ? ";
-                    }
-                    array_push($args, $name);
-                }
-                if (!IsNullOrEmpty($firstName)) {
-                    if ($first) {
-                        $sql .= " first_name = ? ";
-                        $first = false;
-                    } else {
-                        $sql .= " ,first_name = ? ";
-                    }
-                    array_push($args, $firstName);
-                }
-                if (!IsNullOrEmpty($lastName)) {
-                    if ($first) {
-                        $sql .= " last_name = ? ";
-                        $first = false;
-                    } else {
-                        $sql .= " ,last_name = ? ";
-                    }
-                    array_push($args, $lastName);
-                }
-                if (!IsNullOrEmpty($userRole)) {
-                    if ($first) {
-                        $sql .= " user_role = ? ";
-                        $first = false;
-                    } else {
-                        $sql .= " ,user_role = ? ";
-                    }
-                    array_push($args, $userRole);
-                }
-                $sql .= " WHERE user_id = ? ";
+                array_push($args, $username);
+                array_push($args, $emailAddr);
+                array_push($args, $password);
+                array_push($args, $sessionToken);
+                array_push($args, $otp);
+                array_push($args, $status);
+                array_push($args, $name);
+                array_push($args, $firstName);
+                array_push($args, $lastName);
+                array_push($args, $userRole);
                 array_push($args, $userId);
-
                 try {
                     $statement = $conn->prepare($sql);
                     $statement->execute($args);
@@ -219,7 +127,7 @@ if (isValidJSON($json_params)) {
             $json['Status'] = "ERROR - API Key Check Failed";
         }
     } elseif ($action == "deleteUsers") {
-        if (validateAPIKey($userId, $sessionToken)) {
+        if (validateAPIKey($authUserId, $sessionToken)) {
             $sql = "DELETE FROM users WHERE user_id = ?";
             $args = array();
             array_push($args, $userId);
@@ -470,7 +378,11 @@ if (isValidJSON($json_params)) {
         } catch (Exception $e) {
             $json['Exception'] =  $e->getMessage();
         }
+
+
+
         foreach ($result as $row1) {
+            $conn2 = null;
             $sql = "SELECT connections.* FROM users, connections WHERE
              users.user_id = connections.user_id
               AND users.user_id = ".$row1['user_id'];
@@ -487,6 +399,8 @@ if (isValidJSON($json_params)) {
             foreach ($result2 as $row2) {
                 $row1['connections'][] = $row2;
             }
+            $conn2 = null;
+
             $sql = "SELECT user_artifacts.* FROM users, user_artifacts WHERE
              users.user_id = user_artifacts.user_id
               AND users.user_id = ".$row1['user_id'];
@@ -519,6 +433,9 @@ if (isValidJSON($json_params)) {
             foreach ($result2 as $row2) {
                 $row1['user_prefs'][] = $row2;
             }
+
+
+            $conn2 = null;
             $sql = "SELECT group_members.* FROM users, group_members WHERE
              users.user_id = group_members.user_id
               AND users.user_id = ".$row1['user_id'];
@@ -536,6 +453,8 @@ if (isValidJSON($json_params)) {
                 $row1['group_members'][] = $row2;
             }
             $json['users'][] = $row1;
+            $conn2 = null;
+            closeConnections();
         }
     } else {
         $json['Exeption'] = "Unrecognized Action ";

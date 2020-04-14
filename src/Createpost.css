@@ -79,8 +79,9 @@
 
     .wholeform{    
         margin-top: 100px;
-        
+        align-content: center;
     }
+    
     .wholepage{
         display: flex;
         background-color: lightblue;

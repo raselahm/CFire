@@ -1,0 +1,185 @@
+html {
+  background-color: whitesmoke;
+}
+.profile-header{
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  width: 75%;
+  margin-left: 200px;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+.profile-pic{
+  height: 160px;
+  width: 160px;
+  display: flex;
+  border-radius: 50%;
+  background-color: rgba(61, 61, 68, 0.849);
+  border-radius: 50%; 
+}
+
+.profile-name{
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+}
+
+.profile-name-h1{
+  margin-left: 0.5em;
+
+}
+
+.profile-divider{
+  display: flex;
+  margin-top: -20px;
+  margin-left: 4em;
+  height: 2px;
+  width: 60%;
+  background-color: black;
+}
+
+.profile-button{
+  min-height: 30px;
+  height: auto;
+  min-width: 100px;
+  width: auto;
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button{
+  background-color: grey;
+  text-align: center;
+  padding: auto;
+  text-decoration: none;
+  color: white;
+}
+
+.profile-buttons{
+  display: flex;
+  flex-direction: row;
+} 
+
+.profile-button:hover{
+  background-color: #e4e4e4;
+  cursor: pointer;
+  color: black;
+}
+
+ .profile-container{
+   width: 100%;
+   flex-direction: column;
+   align-content: center;
+   align-self: center;
+ }
+
+.profile-labels{
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  font-size: 18px;
+  justify-content: flex-start;
+  word-spacing: 15px;
+}
+
+.profile-tabs{
+  margin-left: 30px;
+  border-bottom: black;
+  padding: 1em;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.profile-tabs:hover{
+  cursor: pointer;
+  background-color: #e4e4e4;
+  padding: 1em;
+  border-bottom: white;
+
+}
+
+.profile-nav{
+  display: flex;
+  width: 100%;
+}
+
+.profile-page-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-self: center;
+  background-color: whitesmoke;
+}
+
+.profile-page-skills{
+  margin-top: 55px;
+  margin-left: 4.5em;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 33%;
+
+}
+
+
+
+.profile-page-skill-icon{
+  display: flex;
+  height: 75px;
+  width: 75px;
+
+  border-radius: 100%;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: rgba(61, 61, 68, 0.849);
+}
+
+.profile-page-uploads{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  width: 50%;
+  margin-top: 15px;
+  margin-left: 110px;
+}
+
+.profile-page-upload-button{
+  display: flex;
+  margin-top: 15px;
+  height: 30px;
+  width: 100px;
+}
+
+.profile-page-button-list{
+  align-self: flex-end;
+  list-style: none;
+}
+
+.profile-page-skill-label{
+  font-size: 13px;
+  margin-left: 110px;
+  align-self: flex-end;
+}
+
+.messagePage-settings{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  height: 100vh;
+  align-self: center;
+}

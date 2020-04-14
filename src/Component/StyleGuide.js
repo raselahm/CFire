@@ -1,7 +1,7 @@
 import React from "react";
 import "./StyleGuide.css";
-import logo from '../CFire.jpg'
-import Navbar from '../Navbar'
+import logo from '../Resources/CFire.jpg'
+import Navbar from './Navbar'
 export default class StyleGuide extends React.Component {
     constructor(props) {
         super(props);
