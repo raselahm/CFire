@@ -1,11 +1,14 @@
 import React from "react";
+
 import "./Profile.css";
 import {Link} from 'react-router-dom';
+
 
 export default class ProfileHeader extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+
             name: "hhh",
           username: "",
           firstname: "",
@@ -16,9 +19,11 @@ export default class ProfileHeader extends React.Component {
         };
       }
 
+
     componentDidMount() {
         this.loadPictures();
     }
+
 
     //API Call to get user-information from user_id, based off the session storage
     getusername(){
@@ -67,6 +72,7 @@ export default class ProfileHeader extends React.Component {
                 }
             );
     }
+
 
 
     render() {

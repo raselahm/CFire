@@ -1,0 +1,245 @@
+html {
+  background-color: whitesmoke;
+}
+
+.profile-container-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-header{
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  width: 75%;
+  margin-left: 200px;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+.profile-pic{
+  height: 160px;
+  width: 160px;
+  display: flex;
+  border-radius: 50%;
+  background-color: rgba(61, 61, 68, 0.849);
+  border-radius: 50%; 
+}
+
+.profile-name{
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-divider{
+  display: flex;
+  margin-top: -20px;
+  margin-left: 4em;
+  height: 2px;
+  width: 90%;
+  background-color: black;
+}
+
+.profile-button{
+  display: flex;
+  min-height: 30px;
+  height: auto;
+  min-width: 100px;
+  width: auto;
+  margin-right: 3em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+button{
+  background-color: grey;
+  text-align: center;
+  padding: auto;
+  text-decoration: none;
+}
+
+.profile-buttons{
+  display: flex;
+  flex-direction: row;
+} 
+
+.profile-button:hover{
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+ .profile-container{
+   width: 75%;
+   flex-direction: column;
+   align-content: center;
+   align-self: center;
+ }
+
+.profile-labels{
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  font-size: 18px;
+  justify-content: flex-start;
+  word-spacing: 15px;
+}
+
+.profile-tabs{
+  margin-left: 30px;
+  border-bottom: black;
+  padding: 1em;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.profile-tabs:hover{
+  cursor: pointer;
+  color: white;
+  background-color: lightblue;
+  padding: 1em;
+  border-bottom: white;
+
+}
+
+.profile-nav{
+  display: flex;
+  width: 100%;
+}
+
+.profile-page-container{
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-self: center;
+  background-color: whitesmoke;
+}
+
+.profile-page-skills{
+  margin-top: 55px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 33%;
+
+}
+
+
+
+.profile-page-skill-icon{
+  display: flex;
+  height: 75px;
+  width: 75px;
+
+  border-radius: 100%;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: rgba(61, 61, 68, 0.849);
+}
+
+.profile-page-uploads{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  width: 50%;
+  margin-top: 15px;
+  margin-left: 110px;
+}
+
+.profile-page-upload-button{
+
+  display: flex;
+  margin-top: 15px;
+  height: 30px;
+  width: 100px;
+}
+
+.profile-page-button-list{
+  align-self: flex-end;
+  list-style: none;
+}
+
+.profile-page-skill-label{
+  font-size: 13px;
+  margin-left: 110px;
+  align-self: flex-end;
+}
+
+.messagePage-settings{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  height: 100vh;
+  align-self: center;
+}
+
+.profile-page-setting-button{
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  height: 30px;
+  width: 200px;
+}
+
+.profile-setting-button-list{
+
+  display: block;
+  list-style: none;
+}
+
+
+.modal{
+  display: flex;
+  position: fixed; /* Stay in place */
+  z-index: 0; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: black;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 1px 10px 20px 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  height: 360px;
+  align-items: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  line-height: 42px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.username-fomr{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.changeUsername-content{
+  display: flex;
+  flex-direction: column;
+}
+
+

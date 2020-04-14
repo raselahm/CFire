@@ -16,21 +16,14 @@ export default class Registration extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      openModal: false,
-      email: "",
-      password: ""
+      openModal: false
+
     };
   }
 
 
   onSubmit = fields => {
     console.log("App Component recieved, ", fields);
-
-    this.setState({
-      email: sessionStorage.getItem("email"),
-      password: sessionStorage.getItem("password")
-    })
-    
     toggleModal(this);
   }
   render(){
@@ -44,15 +37,14 @@ export default class Registration extends Component {
         <span className = "greeting">Welcome to CFire!</span>
         <div>
         </div>
-        <Modal show={this.state.openModal} onClose={e => toggleModal(this)}
-        email = {this.state.email} password = {this.state.password}/>
+        <Modal show={this.state.openModal} onClose={e => toggleModal(this)}/>
+
       </div>
     );
   }
 
   
 }
-
 
 
 function toggleModal(app) {
@@ -122,7 +114,19 @@ class RegisterForm extends React.Component{ //Create Component that will house y
 
   }
 
- 
+
+  addInfo = e =>{
+      fetch("http://stark.cse.buffalo.edu/cse410/blackhole/api/SocialAuth.php", {
+      method: "post",
+          body: {
+              action: "addOrEditUsers"
+              
+          
+          }
+      });
+  }
+
+
 
 // Options. No route tag.... withRouter() function
 
@@ -141,7 +145,10 @@ class RegisterForm extends React.Component{ //Create Component that will house y
               method: "post",
               body: JSON.stringify({
                   action: "register",
-                  email_addr: this.state.email
+
+                  username: this.state.email,
+                  password: this.state.password
+
               })
           })
           .then(res => res.json())
@@ -150,8 +157,22 @@ class RegisterForm extends React.Component{ //Create Component that will house y
           );
 
 
-          sessionStorage.setItem("email", this.state.email);
-          sessionStorage.setItem("password", this.state.password);
+          // fetch("http://stark.cse.buffalo.edu/cse410/blackhole/api/SocialAuth.php",{
+          //     method: "post",
+          //     body: JSON.stringify({
+
+          //         "action":"setpassword",
+                
+          //         "email_addr":this.state.email,
+                
+          //         "token":"<otp from email in step 1",
+                
+          //         "newpassword":this.state.password,
+                
+          //         "confirmpassword":this.state.confirmPassword
+                
+          //       })
+          // })
 
 
           this.setState({
@@ -166,7 +187,7 @@ class RegisterForm extends React.Component{ //Create Component that will house y
               passwordError: "",
               matchError: ""
           })
-          
+
       }
 
       this.setState({
@@ -182,8 +203,10 @@ class RegisterForm extends React.Component{ //Create Component that will house y
 
   render(){       // Render function is what will get shown onto the screen 
      return( 
-     <form className = "loginForm">
-           
+
+     <form className = "loginForm" onSubmit = {this.onSubmit}>
+          { 
+
           <input 
           className = "loginInput"
           name = "firstName"
@@ -193,7 +216,9 @@ class RegisterForm extends React.Component{ //Create Component that will house y
           // Similar to lambda function in java for syntax
           onChange = {e => this.change(e)}
           required
-          /> 
+
+          /> }
+
           <br/>
           <input 
           className = "loginInput"
@@ -258,8 +283,9 @@ class RegisterForm extends React.Component{ //Create Component that will house y
           <div style = {{fontSize:8, color:  "red"}}>
              {this.state.matchError} 
           </div>
-          <input  
-          onClick = {this.onSubmit}
+
+          <input type = "submit" 
+
           className = "buttons" 
           value = "Register"/>
           
@@ -267,4 +293,6 @@ class RegisterForm extends React.Component{ //Create Component that will house y
       </form>
      );
   }
+
 }
+
