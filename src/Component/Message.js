@@ -6,6 +6,7 @@ export default class Message extends React.Component {
     constructor(props) {
 
         super(props);
+
         this.state ={
             username: ""
         };
@@ -39,6 +40,7 @@ export default class Message extends React.Component {
     // };
 
 
+
     render() {
 
         return (
@@ -46,9 +48,11 @@ export default class Message extends React.Component {
             <div className="message-container">
                 <div className="message-text">
                     <div className="message-text-name">
+
                         {this.props.userName}:
                     </div>
                     <div className="message-text-content">
+
                         {this.props.text.message}
                     </div>
                 </div>

@@ -4,17 +4,21 @@ import PropTypes from "prop-types";
 import { Link, withRouter } from "react-router-dom";
 
  class Modal extends React.Component {
+
   onClose = e => {
     this.props.onClose && this.props.onClose(e);
   };
 
+
   otpSubmit = e => {
     
+
     this.props.history.push('/Homepage');
   }
 
   render() {
     console.log("Modal Show is " + this.props.show);
+    
     return (
       <div id="myModal" className="modal">
         <div className="modal-content">
@@ -34,12 +38,15 @@ import { Link, withRouter } from "react-router-dom";
               name = "otp"
               type = "text"
               placeholder = "One-Time Password"
+
             />
             <input type = "submit" className = "buttons"/>
           </form>
           </div>
+
           <div className = "continue">
           </div>
+
           <div id="modalcontent">{this.props.children}</div>
         </div>
       </div>
@@ -51,7 +58,9 @@ import { Link, withRouter } from "react-router-dom";
 Modal.propTypes = {
   onClose: PropTypes.func.isRequired,
   show: PropTypes.bool.isRequired,
+
   otp: PropTypes.string.isRequired
+
 };
 
 export default withRouter(Modal)

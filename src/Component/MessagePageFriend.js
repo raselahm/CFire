@@ -9,6 +9,7 @@ export default class MessagePageFriend extends React.Component {
             username: "PlaceHolder"
 
         };
+
         this.getUsername()
 
     }
@@ -39,11 +40,14 @@ export default class MessagePageFriend extends React.Component {
     };
 
 
+
     render() {
 
         return (
+
             <div className="messagePageFriend-main" onClick={(evt) => this.props.func(this.props.convo)} >
                 <div className="messagePageFriend-icon-container"  >
+
                     <div className="messagePageFriend-profileIcon">
                     </div>
                 </div>
@@ -57,5 +61,4 @@ export default class MessagePageFriend extends React.Component {
 
     }
 }
-
 

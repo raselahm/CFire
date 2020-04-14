@@ -106,5 +106,3 @@ function toggleModal(app) {
 }
 
 export default Homepage;
-
-

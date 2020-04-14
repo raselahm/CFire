@@ -15,6 +15,7 @@ export default class PostForm extends React.Component {
   submitHandler = event => {
     //keep the form from actually submitting
     event.preventDefault();
+
     //make the api call to the authentication page
     fetch("http://stark.cse.buffalo.edu/hci/postcontroller.php", {
       method: "post",

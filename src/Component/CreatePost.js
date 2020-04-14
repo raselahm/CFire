@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar.jsx";
+
 import "../CreatePost.css";
+
 import { Link } from "react-router-dom";
 
 class CreatePost extends React.Component {
@@ -15,6 +17,7 @@ class CreatePost extends React.Component {
 
     submitHandler = event => {
         console.log(this.state.post_text);
+
         event.preventDefault();
         fetch("http://stark.cse.buffalo.edu/cse410/blackhole/api/postcontroller.php", {
             method: "post",
@@ -22,8 +25,10 @@ class CreatePost extends React.Component {
                 action: "addOrEditPosts",
                 user_id: sessionStorage.getItem("user"),
                 session_token: sessionStorage.getItem("token"),
+
                 posttext: this.state.post_text,
                 userid:sessionStorage.getItem("user")
+
                 //TITLE DOESNT EXIST 
                 //title: this.state.post_title
 
@@ -40,6 +45,8 @@ class CreatePost extends React.Component {
                     alert("error!");
                 }
             );
+
+
     };
 
 
@@ -56,6 +63,7 @@ class CreatePost extends React.Component {
         });
         console.log(this.state);
     };
+
 
 
     render() {

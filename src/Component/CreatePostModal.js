@@ -1,8 +1,10 @@
 import React from "react";
 import "../CreatePostModal.css";
 import PropTypes from "prop-types";
+
 import PostingList from "./PostingList";
 import Homepage from "../Pages/Homepage";
+
 
 export default class CreatePostModal extends React.Component {
     constructor(props) {
@@ -28,7 +30,9 @@ export default class CreatePostModal extends React.Component {
                 user_id: sessionStorage.getItem("user"),
                 session_token: sessionStorage.getItem("token"),
                 posttext: this.state.post_text,
+
                 userid:sessionStorage.getItem("user")
+
                 //Title Doesnt Exist
                 //title: this.state.post_title
 
@@ -37,10 +41,12 @@ export default class CreatePostModal extends React.Component {
             .then(res => res.json())
             .then(
                 result => {
+
                     this.props.func();
                     this.setState({
                         postmessage: result.Status
                     });
+
 
 
                 },

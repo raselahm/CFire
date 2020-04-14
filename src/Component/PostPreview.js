@@ -8,6 +8,7 @@ class PostPreview extends React.Component {
             userLiked: false,
             displayedLike: "https://i7.uihere.com/icons/998/832/946/upvote-9fbfa83dcbcc4553543fbbcee0c4e206.png",
             likes: []
+
         };
         this.loadLikes();
     }
@@ -21,11 +22,13 @@ class PostPreview extends React.Component {
                 postid: this.props.post.post_id,
                 tag: "test2"
 
+
             })
         })
             .then(res => res.json())
             .then(
                 result => {
+
                     console.log(result);
                     if (result.post_tags) {
                         console.log("IM LOST")
@@ -33,6 +36,7 @@ class PostPreview extends React.Component {
                             isLoaded: true,
 
                             likes: result.post_tags
+
                         });
                     }
                 },
@@ -43,6 +47,7 @@ class PostPreview extends React.Component {
                     });
                 }
             );
+
         fetch("http://stark.cse.buffalo.edu/cse410/blackhole/api/ptcontroller.php", {
             method: "post",
             body: JSON.stringify({
@@ -51,17 +56,20 @@ class PostPreview extends React.Component {
                 tag: "test2",
                 userid: sessionStorage.getItem("user")
 
+
             })
         })
             .then(res => res.json())
             .then(
                 result => {
+
                     if (result.post_tags !== undefined) {
                         console.log("IM LOST")
                         console.log(result.post_tags);
                         this.setState({
                             userLiked: true,
                             displayedLike: "https://i7.uihere.com/icons/237/974/400/upvote-7ccac87c950ed5a8ce2f412f29940d33.png"
+
                         });
                     }
                 },
@@ -72,6 +80,7 @@ class PostPreview extends React.Component {
                     });
                 }
             );
+
 
     }
 
@@ -133,14 +142,17 @@ class PostPreview extends React.Component {
     }
 
 
+
     render() {
         return (
             <div className="post-preview-main">
                 {this.props.post.post_text}
+
                 <p>{this.state.likes.length}</p>
                 <img className="like"
                      src={this.state.displayedLike}
                      onClick={this.likePost}/>
+
 
             </div>
 

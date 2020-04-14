@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import './LoginPage.css';
 // import Form from '../Component/registerForm'
@@ -16,6 +17,7 @@ export default class Registration extends Component {
     super(props);
     this.state = {
       openModal: false
+
     };
   }
 
@@ -36,12 +38,14 @@ export default class Registration extends Component {
         <div>
         </div>
         <Modal show={this.state.openModal} onClose={e => toggleModal(this)}/>
+
       </div>
     );
   }
 
   
 }
+
 
 function toggleModal(app) {
   app.setState({
@@ -110,6 +114,7 @@ class RegisterForm extends React.Component{ //Create Component that will house y
 
   }
 
+
   addInfo = e =>{
       fetch("http://stark.cse.buffalo.edu/cse410/blackhole/api/SocialAuth.php", {
       method: "post",
@@ -120,6 +125,7 @@ class RegisterForm extends React.Component{ //Create Component that will house y
           }
       });
   }
+
 
 
 // Options. No route tag.... withRouter() function
@@ -139,14 +145,17 @@ class RegisterForm extends React.Component{ //Create Component that will house y
               method: "post",
               body: JSON.stringify({
                   action: "register",
+
                   username: this.state.email,
                   password: this.state.password
+
               })
           })
           .then(res => res.json())
           .then(
 
           );
+
 
           // fetch("http://stark.cse.buffalo.edu/cse410/blackhole/api/SocialAuth.php",{
           //     method: "post",
@@ -164,6 +173,7 @@ class RegisterForm extends React.Component{ //Create Component that will house y
                 
           //       })
           // })
+
 
           this.setState({
               firstName: "",
@@ -193,8 +203,10 @@ class RegisterForm extends React.Component{ //Create Component that will house y
 
   render(){       // Render function is what will get shown onto the screen 
      return( 
+
      <form className = "loginForm" onSubmit = {this.onSubmit}>
           { 
+
           <input 
           className = "loginInput"
           name = "firstName"
@@ -204,7 +216,9 @@ class RegisterForm extends React.Component{ //Create Component that will house y
           // Similar to lambda function in java for syntax
           onChange = {e => this.change(e)}
           required
+
           /> }
+
           <br/>
           <input 
           className = "loginInput"
@@ -269,7 +283,9 @@ class RegisterForm extends React.Component{ //Create Component that will house y
           <div style = {{fontSize:8, color:  "red"}}>
              {this.state.matchError} 
           </div>
+
           <input type = "submit" 
+
           className = "buttons" 
           value = "Register"/>
           
@@ -277,4 +293,6 @@ class RegisterForm extends React.Component{ //Create Component that will house y
       </form>
      );
   }
+
 }
+

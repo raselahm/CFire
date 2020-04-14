@@ -15,18 +15,23 @@ export default class MessagePage extends React.Component {
             error: null,
             userid: "UserName",
             recipientid: "",
+
             recipientName:"",
             senderName: "",
+
             messageText: "",
             messages: [],
             conversations: []
         };
+
         this.getConversations();
     }
 
     loadMessages() {
+
         var firstRequest = [];
         var secondRequest = [];
+
         fetch("http://stark.cse.buffalo.edu/cse410/blackhole/api/messagecontroller.php", {
             method: "post",
             body: JSON.stringify({
@@ -41,6 +46,7 @@ export default class MessagePage extends React.Component {
             .then(
                 result => {
                     if (result.messages) {
+
                         firstRequest = result.messages;
 
                     }
@@ -81,6 +87,7 @@ export default class MessagePage extends React.Component {
                     this.setState({
                         messages: sortable
                     });
+
                 },
                 error => {
                     this.setState({
@@ -129,6 +136,7 @@ export default class MessagePage extends React.Component {
             .then(res => res.json())
             .then(
                 result => {
+
                     if(result.recipient_ids) {
                         this.setState({
                             conversations: result.recipient_ids
@@ -180,6 +188,7 @@ export default class MessagePage extends React.Component {
                             senderName: result.users[0].username
                         });
                     }
+
                 },
                 error => {
                     alert("error!");
@@ -188,10 +197,12 @@ export default class MessagePage extends React.Component {
     };
 
     getRecip(evt) {
+
         this.setState({
             recipientid: evt
         });
         this.getNames();
+
         this.loadMessages();
     }
 
@@ -200,6 +211,7 @@ export default class MessagePage extends React.Component {
             messageText: event.target.value
         });
     };
+
 
     displayUsername(id) {
         console.log("ID" + id);
@@ -217,6 +229,7 @@ export default class MessagePage extends React.Component {
         return (
             <div className="messagePage-settings">
                 <Navbar/>
+
                 <div className="messagePage-main">
                     <div className="messagePage-friends">
                         {this.state.conversations.map(conversation => (
@@ -244,5 +257,4 @@ export default class MessagePage extends React.Component {
         );
     }
 }
-
 
