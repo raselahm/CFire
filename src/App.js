@@ -8,9 +8,10 @@ import Registration from './Pages/Registration';
 import Homepage from './Pages/Homepage';
 import MessagePage from './Component/MessagePage';
 import CreatePost from './Component/CreatePost';
+import Styleguide from './Component/StyleGuide'
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
 } from 'react-router-dom';
 import Navbar from "./Component/Navbar";
@@ -41,6 +42,7 @@ class App extends React.Component {
               <Route path="/Homepage" component={Homepage} />
               <Route path="/MessagePage" component={MessagePage} />
               <Route path="/ProfilePage" component={Profile} />
+              <Route path="/Styleguide" component={Styleguide} />
               <Route path="/CreatePost" component={CreatePost}></Route>
             </div>
           </Router>

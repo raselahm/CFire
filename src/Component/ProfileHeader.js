@@ -93,7 +93,7 @@ export default class ProfileHeader extends React.Component {
                         <ul className="profile-labels">
 
                             <li className="profile-tabs">Profile</li>
-                            <li className="profile-tabs">Groups</li>
+                            <li className="profile-tabs" >Groups</li>
                             <li className="profile-tabs">Projects</li>
 
                         </ul>
