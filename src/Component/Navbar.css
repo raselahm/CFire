@@ -4,7 +4,7 @@
     position:fixed;
     top:0px;
     left: 0px;
-    height:80px;
+    height:58px;
     width:100%;
 
     display: flex;
@@ -19,5 +19,12 @@
       display: inline-block;
      list-style-type: none;
      padding: 20px;
-     margin: auto;
+     height: auto;
+     color: white;
+     text-align: center;     
+  }
+
+  .nav-element:hover{
+     background-color: white;
+     color: black;
   }

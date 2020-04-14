@@ -6,6 +6,7 @@ export default class ProfileHeader extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            name: "hhh",
           username: "",
           firstname: "",
           lastname: "",
@@ -19,6 +20,7 @@ export default class ProfileHeader extends React.Component {
         this.loadPictures();
     }
 
+    //API Call to get user-information from user_id, based off the session storage
     getusername(){
         fetch("http://stark.cse.buffalo.edu//cse410/blackhole/api/usercontroller.php", {
             method: "post",
@@ -26,7 +28,14 @@ export default class ProfileHeader extends React.Component {
                   action: "getUsers",
                   userid: this.state.user_id
             })
-          })
+          }).then(res => res.json())
+          .then(
+              (results) => {
+                  this.setState({
+                      name: results.users[0].name
+                  })
+              }
+          )
     }
 
     loadPictures() {
@@ -62,6 +71,7 @@ export default class ProfileHeader extends React.Component {
 
     render() {
         this.loadPictures();
+        this.getusername();
         const { error, isLoaded, picture } = this.state;
 
         if (!isLoaded) {
@@ -71,7 +81,7 @@ export default class ProfileHeader extends React.Component {
                     <div className="profile-header">
                         <span class="profile-pic"></span>
                         <div className="profile-name">
-                            <h1>{this.state.user_id}</h1>
+                            <h1 className="profile-name-h1">{this.state.name}</h1>
                             <div className="profile-buttons">
                                 <button className="profile-button">Follow</button>
                                 <Link to = '/MessagePage'><button className="profile-button">Message</button></Link>

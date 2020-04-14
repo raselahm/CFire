@@ -23,6 +23,12 @@ html {
 .profile-name{
   display: flex;
   flex-direction: column;
+  margin-left: 1em;
+}
+
+.profile-name-h1{
+  margin-left: 0.5em;
+  
 }
 
 .profile-divider{
@@ -35,14 +41,16 @@ html {
 }
 
 .profile-button{
-  display: flex;
   min-height: 30px;
   height: auto;
   min-width: 100px;
   width: auto;
-  margin-right: 3em;
+  margin-right: 1em;
   margin-left: 1em;
   margin-bottom: 1em;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
 }
 
 button{
@@ -50,6 +58,7 @@ button{
   text-align: center;
   padding: auto;
   text-decoration: none;
+  color: white;
 }
 
 .profile-buttons{
@@ -58,8 +67,9 @@ button{
 } 
 
 .profile-button:hover{
-  background-color: lightblue;
+  background-color: #e4e4e4;
   cursor: pointer;
+  color: black;
 }
 
  .profile-container{
@@ -93,8 +103,7 @@ button{
 
 .profile-tabs:hover{
   cursor: pointer;
-  color: white;
-  background-color: lightblue;
+  background-color: #e4e4e4;
   padding: 1em;
   border-bottom: white;
 
