@@ -38,6 +38,7 @@ export default class PostForm extends React.Component {
           alert("error!");
         }
       );
+
   };
 
   myChangeHandler = event => {

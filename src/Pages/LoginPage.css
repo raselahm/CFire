@@ -107,8 +107,6 @@ html{
   overflow: auto; /* Enable scroll if needed */
   background-color: #add8e6; /* Fallback color */
   background-color: #add8e6; /* Black w/ opacity */
-  border-width: 3px;
-  border-color: black;
 }
 
 /* Modal Content/Box */

@@ -1,13 +1,16 @@
 import React from "react";
 // import "./App.css";
 import './Pages/LoginPage.css'
+
 import Profile from "./Component/Profile.js";
+
 import Modal from "./Component/Modal.js";
 import Login from "./Pages/Login";
 import Registration from './Pages/Registration';
 import Homepage from './Pages/Homepage';
 import MessagePage from './Component/MessagePage';
 import CreatePost from './Component/CreatePost';
+
 import Styleguide from './Component/StyleGuide'
 
 import {
@@ -41,6 +44,7 @@ class App extends React.Component {
               <Route path="/Registration" component={Registration} />
               <Route path="/Homepage" component={Homepage} />
               <Route path="/MessagePage" component={MessagePage} />
+
               <Route path="/ProfilePage" component={Profile} />
               <Route path="/Styleguide" component={Styleguide} />
               <Route path="/CreatePost" component={CreatePost}></Route>

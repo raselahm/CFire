@@ -16,7 +16,9 @@ export default class PostingList extends React.Component {
     this.loadPosts();
   }
 
-  loadPosts() {
+
+  loadPosts()  {
+
     fetch("http://stark.cse.buffalo.edu/hci/postcontroller.php", {
       method: "post",
       body: JSON.stringify({
@@ -56,7 +58,9 @@ export default class PostingList extends React.Component {
       return (
         <div className="posts">
           {posts.map(post => (
-            <Post key={post.post_id} post={post} type={this.props.type} />
+
+            <Post key={post.post_id} post={post} type={this.props.type}  />
+
           ))}
         </div>
       );

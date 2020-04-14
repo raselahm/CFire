@@ -4,6 +4,7 @@
     position:fixed;
     top:0px;
     left: 0px;
+
     height:58px;
     width:100%;
 
@@ -19,6 +20,7 @@
       display: inline-block;
      list-style-type: none;
      padding: 20px;
+
      height: auto;
      color: white;
      text-align: center;     

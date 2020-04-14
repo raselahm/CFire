@@ -1,13 +1,16 @@
 import React, { Component } from "react";
+
 import {Link} from 'react-router-dom'
 import "./Navbar.css"
 
 
 export default class Navbar extends React.Component {
 
+
     render(){
 
         return(
+
         <div id="row navbar" className="navbar">
             <ul id="side-menu-items">
                 <Link to = '/Homepage'><li className="nav-element">
@@ -28,3 +31,4 @@ export default class Navbar extends React.Component {
             }
 
 }
+

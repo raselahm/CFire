@@ -74,7 +74,6 @@ class LoginForm extends React.Component {
             if (result.user) {
               sessionStorage.setItem("token", result.user.session_token);
               sessionStorage.setItem("user", result.user.user_id);
-              sessionStorage.setItem("username", this.state.email);
 
               this.setState({
                 sessiontoken: result.user.session_token,
