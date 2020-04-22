@@ -1,6 +1,4 @@
-html {
-  background-color: whitesmoke;
-}
+
 .profile-header{
   display: flex;
   flex-wrap: wrap;
@@ -53,7 +51,7 @@ html {
   text-align: center;
 }
 
-button{
+.profile-button{
   background-color: grey;
   text-align: center;
   padding: auto;

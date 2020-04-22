@@ -7,6 +7,7 @@ import Login from "./Pages/Login";
 import Registration from './Pages/Registration';
 import Homepage from './Pages/Homepage';
 import MessagePage from './Component/MessagePage';
+import OnboardingPage from './Pages/onboarding'
 import CreatePost from './Component/CreatePost';
 import Styleguide from './Component/StyleGuide'
 
@@ -42,6 +43,7 @@ class App extends React.Component {
               <Route path="/Homepage" component={Homepage} />
               <Route path="/MessagePage" component={MessagePage} />
               <Route path="/ProfilePage" component={Profile} />
+              <Route path="/Onboarding" component = {OnboardingPage}/>
               <Route path="/Styleguide" component={Styleguide} />
               <Route path="/CreatePost" component={CreatePost}></Route>
             </div>

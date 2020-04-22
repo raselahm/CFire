@@ -63,9 +63,7 @@ function toggleModal(app) {
 
 class RegisterForm extends React.Component{ //Create Component that will house your login form
   state = {
-      firstName: "",
-      lastName: "",
-      username: "",
+      
       email: "", 
       password: "",
       confirmPassword: "",
@@ -184,42 +182,7 @@ class RegisterForm extends React.Component{ //Create Component that will house y
      return( 
      <form className = "loginForm">
            
-          <input 
-          className = "loginInput"
-          name = "firstName"
-          placeholder = "First Name" 
-          value = {this.state.firstName}
-          // onChange function allows you to change the state of the component
-          // Similar to lambda function in java for syntax
-          onChange = {e => this.change(e)}
-          required
-          /> 
-          <br/>
-          <input 
-          className = "loginInput"
-          name = "lastName"
-          placeholder = "Last Name" 
-          value = {this.state.lastName}
-          // onChange function allows you to change the state of the component
-          // Similar to lambda function in java for syntax
-          onChange = {e => this.change(e)}
-          required
-          /> 
-          <br/>
-          <input type = "text"
-          className = "loginInput"
-          name = "username"
-          placeholder = "Username" 
-          value = {this.state.username}
-          // onChange function allows you to change the state of the component
-          // Similar to lambda function in java for syntax
-          onChange = {e => this.change(e)}
-          required
-          /> 
-          <br/>
-          <div style = {{fontSize:8, color: "red"}}>
-             {this.state.usernameError}
-          </div>
+          
           <input type = "email"
           className = "loginInput"
           name = "email"
