@@ -1,23 +1,20 @@
 import React from "react";
 // import "./App.css";
-import './Pages/LoginPage.css'
-
-import Profile from "./Component/Profile.js";
-
-import Modal from "./Component/Modal.js";
-import Login from "./Pages/Login";
-import Registration from './Pages/Registration';
-import Homepage from './Pages/Homepage';
-import MessagePage from './Component/MessagePage';
-import CreatePost from './Component/CreatePost';
-
-import Styleguide from './Component/StyleGuide'
+import './Component/Login-Register/LoginPage.css'
+import Profile from "./Component/Profile/Profile.js";
+import Login from "./Component/Login-Register/Login";
+import Registration from './Component/Login-Register/Registration';
+import Homepage from './Component/Homepage/Homepage';
+import MessagePage from './Component/Messages/MessagePage';
+import OnboardingPage from './Component/Onboarding/onboarding'
+import CreatePost from './Component/Homepage/CreatePost';
+import Styleguide from './Component/StyleGuide/StyleGuide'
 
 import {
   HashRouter as Router,
   Route,
 } from 'react-router-dom';
-import Navbar from "./Component/Navbar";
+import PostPage from "./Component/Postpage/PostPage";
 
 
 class App extends React.Component {
@@ -31,28 +28,29 @@ class App extends React.Component {
   render() {
 
     return (
-      <div className="App">
-        <header className="App-header">
+        <div className="App">
+          <header className="App-header">
 
-        </header>
-        <div>
-          <Router>
+          </header>
+          <div>
+            <Router>
 
-            <div className="mainContent">
+              <div className="mainContent">
 
-              <Route exact path="/" component={Login} />
-              <Route path="/Registration" component={Registration} />
-              <Route path="/Homepage" component={Homepage} />
-              <Route path="/MessagePage" component={MessagePage} />
+                <Route exact path="/" component={Login}/>
+                <Route path="/Registration" component={Registration}/>
+                <Route path="/Homepage" component={Homepage}/>
+                <Route path="/MessagePage" component={MessagePage}/>
+                <Route path="/ProfilePage" component={Profile}/>
+                <Route path="/Onboarding" component={OnboardingPage}/>
+                <Route path="/Styleguide" component={Styleguide}/>
+                <Route path="/CreatePost" component={CreatePost}/>
+                <Route path="/PostPage" component={PostPage}/>
+              </div>
+            </Router>
+          </div>
 
-              <Route path="/ProfilePage" component={Profile} />
-              <Route path="/Styleguide" component={Styleguide} />
-              <Route path="/CreatePost" component={CreatePost}></Route>
-            </div>
-          </Router>
         </div>
-
-      </div>
     );
   }
 }
@@ -62,10 +60,10 @@ export default App;
 class Navigation extends React.Component {
   render() {
 
-    let post = require("./post.svg");
-    let friend = require("./friends.svg");
-    let setting = require("./settings.svg");
-    let help = require("./help.svg");
+    let post = require("./Resources/post.svg");
+    let friend = require("./Resources/friends.svg");
+    let setting = require("./Resources/settings.svg");
+    let help = require("./Resources/help.svg");
     let mainContent = React.createRef();
 
     return (
