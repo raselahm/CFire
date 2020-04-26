@@ -9,12 +9,19 @@ import MessagePage from './Component/Messages/MessagePage';
 import OnboardingPage from './Component/Onboarding/onboarding'
 import CreatePost from './Component/Homepage/CreatePost';
 import Styleguide from './Component/StyleGuide/StyleGuide'
+<<<<<<< Updated upstream
+=======
+import PostPage from "./Component/Postpage/PostPage";
+>>>>>>> Stashed changes
 
 import {
   HashRouter as Router,
   Route,
 } from 'react-router-dom';
+<<<<<<< Updated upstream
 import PostPage from "./Component/Postpage/PostPage";
+=======
+>>>>>>> Stashed changes
 
 
 class App extends React.Component {

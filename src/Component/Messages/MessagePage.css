@@ -1,0 +1,143 @@
+.messagePage-main {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-self: center;
+  height: 75%;
+  margin-top: 10%;
+  width: 75%;
+}
+
+.messagePage-friends {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 80%;
+  border-style: solid;
+  border-color: rgb(145, 145, 145);
+  border-width: 10px;
+  background-color: white;
+}
+
+.messagePageFriend-main {
+  background-color: white;
+  border-radius: 4%;
+  height: 10%;
+  border-style: solid;
+  border-color: rgb(145, 145, 145);
+  border-width: 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.messagePageFriend-icon-container {
+  height: 95%;
+  width: 25%;
+  margin-left: 2px;
+}
+
+.messagePageFriend-profileIcon {
+  background-color: rgb(145, 145, 145);
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.messagePageFreind-profileName {
+  background-color: white;
+}
+
+.messagePage-messages {
+  width: 75%;
+  height: 80%;
+  border-style: solid;
+  border-color: rgb(145, 145, 145);
+  border-width: 10px;
+}
+
+.messagePagemessages-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.messagePagemessages-messages {
+  background-color: white;
+  flex-direction: column;
+  display: flex;
+  align-content: flex-start;
+  justify-content: start;
+  height: 90%;
+  overflow-y: scroll;
+  
+}
+
+.message-container {
+  font-size: 15px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  height: 15px;
+  width: 100%;
+  margin-bottom: 1px;
+  margin-top: 2px;
+}
+
+.message-text{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  align-content: flex-start;
+}
+
+.message-text-name{
+  margin-left: 1px;
+}
+
+.message-text-content{
+  margin-left: 2px;
+}
+
+.message-footer{
+  display: flex;
+  align-self: center;
+  background-color: black;
+  width: 100%;
+  height: 1px;
+  margin-top: -1px;
+}
+
+.messagePageInput-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.messagePageInpt-textArea{
+  width: 100%;
+  height: 100%;
+
+}
+
+.messagePageInput-send{
+  border: solid;
+  border-width: 3px;
+  border-color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+.messagePage-settings {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  align-self: center;
+}
+
+
+
