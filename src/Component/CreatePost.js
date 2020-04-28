@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar.jsx";
 
-import "../CreatePost.css";
+import "./CreatePost.css";
 
 import { Link } from "react-router-dom";
 

@@ -15,7 +15,8 @@ export default class ProfileHeader extends React.Component {
           lastname: "",
           favoritecolor: "",
           responseMessage: "",
-          user_id: sessionStorage.getItem("user")
+          user_id: sessionStorage.getItem("user"),
+          profile_picture_url: "https://via.placeholder.com/150"
         };
       }
 
@@ -60,7 +61,7 @@ export default class ProfileHeader extends React.Component {
                     if (result.userArtifacts) {
                         this.setState({
                             isLoaded: true,
-                            picture: result.userArtifacts
+                            //profile_picture_url: result.userArtifacts
                         });
                     }
                 },
@@ -85,7 +86,7 @@ export default class ProfileHeader extends React.Component {
                 
                 <div className="profile-container">
                     <div className="profile-header">
-                        <span class="profile-pic"></span>
+                        <img class="profile-pic" src={this.state.profile_picture_url}></img>
                         <div className="profile-name">
                             <h1 className="profile-name-h1">{this.state.name}</h1>
                             <div className="profile-buttons">
