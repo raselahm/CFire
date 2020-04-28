@@ -120,3 +120,16 @@ html{
   width: 50%; /* Could be more or less, depending on screen size */
   height: 200px;
 }
+
+.profilePicPreview{
+  width: 100px;
+  height: 100px;
+}
+
+.personals{
+  width: 200px;
+  height: 50px;
+}
+.names{
+  margin-right: 200px;
+}
